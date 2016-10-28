@@ -8,7 +8,6 @@
 
 <body>
 
-
   <!--    Хедер    -->
 
   <header>
@@ -67,6 +66,7 @@
   </header>
   <main>
     <div class="container">
+
       <!--  Хлебные крошки -->
       <div class="breadcrumbs">
         <a href="#">Главная</a>
@@ -84,19 +84,57 @@
           <div class="cat-title">
             <p3>Фильтр:</p3>
           </div>
-
-
+          <form action="" method="get">
+            <div class="filter-item">
+              <span>Цена:</span>
+              <div class="filter-range">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle min-toggle"></div>
+                  <div class="toggle max-toggle"></div>
+                </div>
+                <div class="price-controls">
+                  <input class="min-price" type="text" value="0"> - <input class="max-price" type="text" value="30000">
+                </div>
+              </div>
+            </div>
+            <div class="filter-item">
+              <span>Производители:</span>
+              <input type="checkbox" name="brand-bosch" id="brand-bosch" checked>
+              <label for="brand-bosch">Bosch</label>
+              <input type="checkbox" name="brand-intescole" id="brand-intescole">
+              <label for="brand-intescole">Интерскол</label>
+              <input type="checkbox" name="brand-makita" id="brand-makita" checked>
+              <label for="brand-makita">Makita</label>
+              <input type="checkbox" name="brand-dewalt" id="brand-dewalt">
+              <label for="brand-dewalt">DeWalt</label>
+              <input type="checkbox" name="brand-hitachi" id="brand-hitachi">
+              <label for="brand-hitachi">Hitachi</label>
+            </div>
+            <div class="filter-item">
+              <span>Питание:</span>
+              <label>
+                <input type="radio" name="supply" value="battery" checked>Аккумуляторные
+              </label>
+              <label>
+                <input type="radio" name="supply" value="mains">Сетевые
+              </label>
+            </div>
+            <input type="submit" value="Показать">
+          </form>
         </div>
 
         <!--  Каталог-->
         <div class="cat-product">
           <div class="cat-title">
             <p3>Cортировка:</p3>
-            <div class="sort-price">По цене</div>
-            <div class="sort-type">По типу</div>
-            <div class="sort-function">По функционалу</div>
-            <div class="sort-up">По возрастанию</div>
-            <div class="sort-down">По убыванию</div>
+            <a class="sort-price">По цене</a>
+            <a class="sort-type">По типу</a>
+            <a class="sort-function">По функционалу</a>
+            <span class="sort-up">По возрастанию</span>
+            <span class="sort-down">По убыванию</span>
           </div>
           <div class="product-list">
             <div class="product-item product-item-new">

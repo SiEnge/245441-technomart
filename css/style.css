@@ -1,5 +1,499 @@
 body {
-    font-size:14px;
-    font-family:"Cuprum", "PT Sans", sans-serif;
-    color:black;
+  font-size: 14px;
+  font-family: "Cuprum", "PT Sans", sans-serif;
+  color: black;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header {
+  width: auto;
+  background-color: rgb(241, 245, 247);
+  margin: 0 auto;
+  min-height: 320px;
+  margin-bottom: 60px;
+}
+
+.container {
+  width: 940px;
+  /*padding: 0 10px;*/
+  margin: 0 auto;
+}
+
+.header-top {
+  width: auto;
+  padding-bottom: 42px;
+  background-color: rgb(41, 52, 73);
+  margin-bottom: 47px;
+}
+
+.header-logo {
+  float: left;
+  width: 220px;
+  height: 32px;
+  background-color: rgb(238, 54, 67);
+  border-bottom: 5px solid rgb(181, 41, 51);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding-top: 10px;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header form {
+  float: left;
+  width: auto;
+  padding: 13px 0;
+}
+
+.header-bookmarks,
+.header-cart,
+.header-order {
+  float: left;
+  width: 150px;
+  padding: 13px 0;
+  /*min-height: 42px;*/
+  /*background-color: rgb(99, 100, 67);*/
+    text-align: center;
+}
+
+.header-order {
+  background-color: rgb(99, 166, 62);
+}
+
+.header-bookmarks a, .header-cart a, .header-order a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.header-middle {
+  width: auto;
+  margin-bottom: 45px;
+}
+
+.lids {
+  float: left;
+  min-height: 61px;
+  width: 300px;
+  padding-left: 55px;
+  margin-right: 10px;
+  color: rgb(238, 54, 67);
+  font-style: italic;
+}
+.phone-address {
+  float: left;
+}
+
+.phone {
+  width: 264px;
+  border: 3px solid rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
+  color: rgb(238, 54, 67);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.address {
+  color: rgb(50, 66, 92);
+}
+
+.user-block-btn {
+  float: right;
+  padding: 13px 24px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav {
+  width: auto;
+  padding: 20px 0;
+  background-color: rgb(50, 66, 92);
+  margin-bottom: 60px;
+  border-bottom: 5px solid rgb(41, 52, 73);
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 60px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/*  ПромоБлок*/
+
+.promo {
+  margin-bottom: 53px;
+}
+
+.promo-item {
+  float: right;
+  width: 277px;
+  height: 123px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-left: 23px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+}
+
+.promo-item:nth-child(3) {
+  margin-left: 0;
+}
+
+.promo-btn {
+  display: block;
+  width: 135px;
+  padding: 13px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.promo-material {
+  background-color: rgb(246, 178, 45);
+}
+
+.promo-tool {
+  background-color: rgb(74, 175, 222);
+}
+
+.promo-equipment {
+  background-color: rgb(204, 121, 209);
+}
+
+.promo-discount {
+  background-color: rgb(133, 209, 121);
+}
+
+.promo-shipping {
+  background-color: rgb(246, 178, 45);
+}
+
+/* Промо Слайдер  */
+
+.promo-slide {
+  float: left;
+  width: 620px;
+  height: 266px;
+}
+
+.promo-slide2 {
+  display: none;
+}
+
+
+
+/*   Популярные товары   */
+.popular-title {
+  width: auto;
+  background-color: rgb(247, 243, 236);
+  padding-left: 30px;
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+.popular-title h2 {
+  float: left;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: rgb(50, 66, 92);
+}
+
+.popular-btn {
+  float: right;
+  width: 253px;
+  padding: 15px 0;
+  text-align: center;
+  background-color: rgb(238, 54, 67);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.product-list {
+  vertical-align: top;
+  font-size: 0;
+  margin-bottom: 20px;
+}
+
+.product-item,
+.brand-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 218px;
+  border: 1px solid rgb(229, 229, 229);
+  margin-right: 20px;
+  font-size: 18px;
+  text-align: center;
+
+}
+
+.product-item p {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 30px;
+}
+
+.product-price-strike {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(153, 153, 153);
+  text-decoration: line-through;
+  margin-bottom: 15px;
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  background-color: rgb(238, 54, 67);
+  padding: 12px 35px;
+}
+
+.product-item:nth-child(4n),
+.brand-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.product-item {
+  height: 316px;
+}
+
+.brand-list {
+  vertical-align: top;
+  font-size: 0;
+  margin-bottom: 65px;
+}
+
+.brand-item {
+  height: 145px;
+  margin-bottom: 20px;
+}
+
+/*   Сервис   */
+.services {
+  padding-top: 65px;
+  background-color: rgb(242, 246, 248);
+  margin-bottom: 80px;
+}
+
+.services h2 {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.services p {
+  font-size: 12px;
+}
+
+.service-tabs {
+  float: left;
+  width: 240px;
+  margin-right: 80px;
+  padding-top: 25px;
+  padding-bottom: 45px;
+}
+
+.service-tab {
+  width: auto;
+  background-color: rgb(50, 66, 92);
+  font-size: 16px;
+  padding: 20px 23px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+
+}
+.service-tabslides {
+  float: left;
+  width: 400px;
+}
+
+.service-tabslides h3 {
+  font-size: 26px;
+  text-transform: uppercase;
+  color: rgb(50, 66, 92);
+}
+
+.service-tabslides p {
+  width: auto;
+  padding-bottom: 30px;
+}
+
+.service-btn {
+  padding: 14px 40px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background-color: rgb(238, 54, 67);
+}
+
+.serv-2, .serv-3 {
+  display: none;
+}
+
+ /*  Компания - Контакты  */
+.about {
+  float: left;
+  width: 530px;
+}
+
+.about-contacts h2 {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.about p {
+  font-size: 12px;
+}
+
+.about li {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.about-btn, .contacts-btn {
+  padding: 14px 40px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: rgb(238, 54, 67);
+}
+
+.about ul {
+  margin-bottom: 40px;
+}
+
+.contacts {
+  float: right;
+  margin: 0 10px;
+  width: 320px;
+}
+
+.contacts img {
+  margin: 40px 0;
+}
+
+/*  Футер  */
+footer {
+  width: auto;
+  margin-top: 85px;
+  background-color: rgb(50, 66, 92);
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+}
+
+.footer-logo {
+  float: left;
+  width: 220px;
+  height: 23px;
+  background-color: rgb(238, 54, 67);
+  border-bottom: 5px solid rgb(181, 41, 51);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer-address {
+  float: left;
+}
+
+.footer-menu-top,
+.footer-menu-bottom {
+  float: right;
+}
+
+ .footer-menu-top {
+   margin-top: 35px;
+ }
+
+.footer-menu-top li,
+.footer-menu-bottom li {
+  display: inline-block;
+  margin-right: 60px;
+}
+
+.footer-menu-top li:last-child,
+.footer-menu-bottom li:last-child {
+  margin-right: 0;
+}
+
+.footer-menu-top a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.footer-menu-bottom a {
+  color: rgb(255, 209, 128);
+  text-decoration: none;
+}
+
+.footer-middle {
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+
+.footer-bottom {
+  background-color: rgb(41, 52, 73);
+  padding: 15px 0;
+}
+
+.footer-bottom p span {
+  color: rgb(255, 209, 128);
+}
+
+.footer-copyright {
+  float: left;
+  width: 320px;
+}
+
+.footer-social {
+  float: right;
+  width: 150px;
+  padding-top: 25px;
+  text-align: center;
+}
+
+.social-vk, .social-fb, .social-ig {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.footer-feedback {
+  float: right;
+  width: 160px;
+  margin-left: 60px;
+}
+
+.footer-design {
+  float: right;
+  width: 150px;
+  margin-left: 40px;
 }

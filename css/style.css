@@ -1,4 +1,5 @@
 body {
+  min-width: 960px;
   font-size: 14px;
   font-family: "Cuprum", "PT Sans", sans-serif;
   color: black;
@@ -19,7 +20,7 @@ header {
 
 .container {
   width: 940px;
-  /*padding: 0 10px;*/
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -35,7 +36,9 @@ header {
   width: 220px;
   height: 32px;
   padding-top: 10px;
+  /*padding-bottom: 10px;*/
   font-size: 24px;
+  line-height: 24px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -66,6 +69,8 @@ header form {
 .header-bookmarks a,
 .header-cart a,
 .header-order a {
+  font-size: 17px;
+  line-height: 18px;
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
@@ -80,6 +85,8 @@ header form {
   width: 250px;
   margin-right: 10px;
   padding-left: 55px;
+  font-size: 17px;
+  line-height: 23px;
   font-style: italic;
   color: rgb(238, 54, 67);
 }
@@ -91,8 +98,9 @@ header form {
 .phone {
   width: 264px;
   padding: 10px;
-  font-weight: bold;
-  font-size: 22px;
+  /*font-weight: bold;*/
+  font-size: 21px;
+  line-height: 18px;
   text-align: center;
   color: rgb(238, 54, 67);
   border: 3px solid rgb(255, 255, 255);
@@ -100,7 +108,9 @@ header form {
 
 .address {
   padding-top: 10px;
-  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  /*font-weight: bold;*/
   color: rgb(50, 66, 92);
 }
 
@@ -113,7 +123,9 @@ header form {
   float: right;
   margin-left: 10px;
   padding: 13px 24px;
-  font-weight: bold;
+  /*font-weight: bold;*/
+  font-size: 21px;
+  line-height: 18px;
   text-decoration: none;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -137,6 +149,7 @@ nav {
   padding: 20px 0;
   background-color: rgb(50, 66, 92);
   border-bottom: 5px solid rgb(41, 52, 73);
+  list-style: none;
 }
 
 nav li {
@@ -149,7 +162,8 @@ nav li:last-child {
 }
 
 nav li a {
-  font-size: 14px;
+  font-size: 17px;
+  line-height: 17px;
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
@@ -174,11 +188,17 @@ nav li a {
   margin-left: 0;
 }
 
+.promo-item h3 {
+  font-size: 24x;
+  line-height: 30px;
+}
+
 .promo-btn {
   display: block;
   width: 135px;
   padding: 13px 0;
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -217,6 +237,18 @@ nav li a {
   display: none;
 }
 
+.promo-slide h2 {
+  font-size: 36px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.promo-slide p {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
 /*   Популярные товары   */
 .popular-title {
   width: auto;
@@ -230,7 +262,8 @@ nav li a {
 
 .popular-title h2 {
   float: left;
-  font-size: 17px;
+  font-size: 30px;
+  line-height: 30px;
   text-transform: uppercase;
   color: rgb(50, 66, 92);
 }
@@ -239,6 +272,8 @@ nav li a {
   float: right;
   width: 253px;
   padding: 15px 0;
+  font-size: 14px;
+  line-height: 18px;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
@@ -257,7 +292,9 @@ nav li a {
   display: inline-block;
   width: 218px;
   margin-right: 20px;
-  font-size: 18px;
+  font-weight: bold;
+  font-family: "PT Sans", sans-serif;
+
   text-align: center;
   vertical-align: top;
   border: 1px solid rgb(229, 229, 229);
@@ -265,15 +302,17 @@ nav li a {
 
 .product-item p {
   padding: 0 30px;
-  font-size: 14px;
+  font-size: 18px;
+  line-height: 20px;
   font-weight: bold;
 }
 
 .product-price-strike {
   display: block;
   margin-bottom: 15px;
-  font-weight: bold;
-  font-size: 14px;
+  /*font-weight: bold;*/
+  font-size: 17px;
+  line-height: 18px;
   text-transform: uppercase;
   text-decoration: line-through;
   color: rgb(153, 153, 153);
@@ -282,7 +321,9 @@ nav li a {
 .product-price {
   padding: 12px 35px;
   font-size: 14px;
-  font-weight: bold;
+  /*font-weight: bold;*/
+  font-size: 17px;
+  line-height: 18px;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   background-color: rgb(238, 54, 67);
@@ -316,12 +357,15 @@ nav li a {
 }
 
 .services h2 {
-  font-size: 22px;
+  font-size: 30px;
+  line-height: 24px;
   text-transform: uppercase;
 }
 
 .services p {
-  font-size: 12px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 .service-tabs {
@@ -335,7 +379,8 @@ nav li a {
 .service-tab {
   width: auto;
   padding: 20px 23px;
-  font-size: 16px;
+  font-size: 21px;
+  line-height: 30px;
   font-weight: bold;
   color: rgb(255, 255, 255);
   background-color: rgb(50, 66, 92);
@@ -347,13 +392,17 @@ nav li a {
 }
 
 .service-tabslides h3 {
-  font-size: 26px;
+  font-size: 36px;
+  line-height: 24px;
   text-transform: uppercase;
   color: rgb(50, 66, 92);
 }
 
 .service-tabslides p {
   width: auto;
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
   padding-bottom: 30px;
 }
 
@@ -375,23 +424,30 @@ nav li a {
 }
 
 .about-contacts h2 {
-  font-size: 22px;
+  font-size: 30px;
+  line-height: 24px;
   text-transform: uppercase;
 }
 
-.about p {
-  font-size: 12px;
+.about-contacts p {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 .about li {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  /*font-weight: bold;*/
+  padding-bottom: 15px;
 }
 
 .about-btn,
 .contacts-btn {
   padding: 14px 40px;
   text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   background-color: rgb(238, 54, 67);
@@ -426,7 +482,8 @@ footer {
   height: 23px;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 22px;
+  font-size: 30px;
+  line-height: 30px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -439,9 +496,17 @@ footer {
   float: left;
 }
 
+.footer-address p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
 .footer-menu-top,
 .footer-menu-bottom {
   float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
  .footer-menu-top {
@@ -452,6 +517,9 @@ footer {
 .footer-menu-bottom li {
   display: inline-block;
   margin-right: 60px;
+  font-size: 18px;
+  line-height: 24px;
+
 }
 
 .footer-menu-top li:last-child,
@@ -474,6 +542,8 @@ footer {
   padding-bottom: 35px;
 }
 
+
+
 .footer-bottom {
   padding: 15px 0;
   background-color: rgb(41, 52, 73);
@@ -486,6 +556,11 @@ footer {
 .footer-copyright {
   float: left;
   width: 320px;
+}
+
+.footer-copyright {
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .footer-social {
@@ -511,6 +586,13 @@ footer {
   width: 150px;
   margin-left: 40px;
 }
+
+.footer-design p,
+.footer-feedback p {
+  font-size: 16px;
+  line-height: 18px;
+}
+
 
 /*  Хлебные крошки*/
 .breadcrumbs {

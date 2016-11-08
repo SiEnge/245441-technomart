@@ -13,7 +13,7 @@ body {
 
 header {
   width: auto;
-  min-height: 320px;
+  /*min-height: 320px;*/
   margin-bottom: 60px;
   background-color: rgb(241, 245, 247);
 }
@@ -22,13 +22,15 @@ header {
   width: 940px;
   padding: 0 10px;
   margin: 0 auto;
+    /*border: 2px solid rgb(255, 0, 0);*/
 }
 
 .header-top {
-  width: auto;
-  margin-bottom: 47px;
+  /*width: auto;*/
+  margin-bottom: 45px;
   padding-bottom: 42px;
   background-color: rgb(41, 52, 73);
+  /*background-color: rgb(25, 0, 0);*/
 }
 
 .header-logo {
@@ -36,6 +38,7 @@ header {
   width: 220px;
   height: 32px;
   padding-top: 10px;
+  /*margin*/
   /*padding-bottom: 10px;*/
   font-size: 24px;
   line-height: 24px;
@@ -47,32 +50,91 @@ header {
   border-bottom: 5px solid rgb(181, 41, 51);
 }
 
+.header-logo:hover {
+  background-color: rgb(202, 44, 55);
+  border-color: rgb(154, 33, 42);
+}
+
+.header-logo:active {
+  /*color: rgb(255, 255, 255);*/
+  background-color: rgb(186, 39, 50);
+  border-color: rgb(142, 30, 38);
+}
+
 header form {
   float: left;
-  width: auto;
+  width: 270px;
   padding: 13px 0;
 }
 
-.header-bookmarks,
-.header-cart,
-.header-order {
-  float: left;
-  width: 150px;
-  padding: 13px 0;
-  text-align: center;
+form input[type="submit"] {
+  font-size: 0;
 }
 
-.header-order {
-  background-color: rgb(99, 166, 62);
+.btn-search {
+display: none;
+}
+
+form input[type="text"] {
+  font-family: "Cuprum";
+  font-size: 17px;
+  padding-left: 38px;
+  line-height: 18px;
+  background-color: rgb(41, 52, 73);
+  color: rgb(255, 255, 255);
 }
 
 .header-bookmarks a,
-.header-cart a,
-.header-order a {
+.header-cart a {
+  float: right;
+  width: 90px;
+  padding: 12px 0;
+  padding-left: 50px;
+  padding-right: 10px;
   font-size: 17px;
   line-height: 18px;
   text-decoration: none;
   color: rgb(255, 255, 255);
+
+}
+
+.header-bookmarks a {
+    background-image: url("img/icon-basket.png");
+    background-position: left top;
+  /*background-position: 5px 5px;*/
+}
+
+.header-order a {
+  float: right;
+  width: 150px;
+  padding: 12px 0;
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(99, 166, 62);
+  color: rgb(255, 255, 255);
+}
+
+.header-bookmarks a:hover,
+.header-cart a:hover {
+  background-color: rgb(33, 42, 58);
+  /*color: rgb(255, 0, 0);*/
+}
+
+.header-order a:hover {
+  background-color: rgb(95, 187, 45);
+}
+
+.header-bookmarks a:active,
+.header-cart a:active {
+  background-color: rgb(22, 29, 41);
+  color: rgb(139, 142, 148);
+}
+
+.header-order a:active {
+  background-color: rgb(81, 133, 52);
+  color: rgb(170, 195, 155);
 }
 
 .header-middle {
@@ -268,10 +330,8 @@ nav li a {
   color: rgb(50, 66, 92);
 }
 
-.popular-btn {
-  float: right;
-  width: 253px;
-  padding: 15px 0;
+.btn {
+  padding: 15px 10px;
   font-size: 14px;
   line-height: 18px;
   text-decoration: none;
@@ -279,6 +339,12 @@ nav li a {
   text-align: center;
   color: rgb(255, 255, 255);
   background-color: rgb(238, 54, 67);
+  border-radius: 3px;
+}
+
+.popular-btn {
+  float: right;
+  width: 253px;
 }
 
 .product-list {
@@ -407,10 +473,10 @@ nav li a {
 }
 
 .service-btn {
-  padding: 14px 40px;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  background-color: rgb(238, 54, 67);
+  /*padding: 14px 40px;*/
+  /*text-decoration: none;*/
+  /*color: rgb(255, 255, 255);*/
+  /*background-color: rgb(238, 54, 67);*/
 }
 
 .serv-2, .serv-3 {
@@ -444,13 +510,13 @@ nav li a {
 
 .about-btn,
 .contacts-btn {
-  padding: 14px 40px;
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: rgb(255, 255, 255);
-  background-color: rgb(238, 54, 67);
+  /*padding: 14px 40px;*/
+  /*text-decoration: none;*/
+  /*font-size: 14px;*/
+  /*line-height: 18px;*/
+  /*text-transform: uppercase;*/
+  /*color: rgb(255, 255, 255);*/
+  /*background-color: rgb(238, 54, 67);*/
 }
 
 .about ul {
@@ -588,10 +654,7 @@ footer {
 }
 
 .footer-design p,
-.footer-feedback p {
-  font-size: 16px;
-  line-height: 18px;
-}
+.footer-feedback p
 
 
 /*  Хлебные крошки*/

@@ -14,7 +14,7 @@ body {
 header {
   width: auto;
   /*min-height: 320px;*/
-  margin-bottom: 60px;
+  margin-bottom: 59px;
   background-color: rgb(241, 245, 247);
 }
 
@@ -27,7 +27,7 @@ header {
 
 .header-top {
   /*width: auto;*/
-  margin-bottom: 45px;
+  margin-bottom: 48px;
   padding-bottom: 42px;
   background-color: rgb(41, 52, 73);
   /*background-color: rgb(25, 0, 0);*/
@@ -86,6 +86,7 @@ form input[type="text"] {
 
 .header-bookmarks a,
 .header-cart a {
+  /*position: relative;*/
   float: right;
   width: 90px;
   padding: 12px 0;
@@ -95,14 +96,24 @@ form input[type="text"] {
   line-height: 18px;
   text-decoration: none;
   color: rgb(255, 255, 255);
+}
+
+.header-bookmarks {
+  position: relative;
 
 }
 
-.header-bookmarks a {
-    background-image: url("img/icon-basket.png");
-    background-position: left top;
-  /*background-position: 5px 5px;*/
+.header-bookmarks .icon  {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+  background: url("img/icon-ig.png") no-repeat 0 0;
+
 }
+
 
 .header-order a {
   float: right;
@@ -139,18 +150,19 @@ form input[type="text"] {
 
 .header-middle {
   width: auto;
-  margin-bottom: 45px;
+  margin-bottom: 39px;
 }
 
 .lids {
   float: left;
-  width: 250px;
-  margin-right: 10px;
-  padding-left: 55px;
-  font-size: 17px;
+  width: 247px;
+  margin-right: 20px;
+  padding-left: 53px;
+  font-size: 15px;
   line-height: 23px;
   font-style: italic;
   color: rgb(238, 54, 67);
+  /*background-color: rgb(255, 0, 0);*/
 }
 
 .phone-address {
@@ -158,18 +170,23 @@ form input[type="text"] {
 }
 
 .phone {
-  width: 264px;
-  padding: 10px;
+  width: 175px;
+  padding: 10px 0;
+  padding-left: 70px;
+  padding-right: 20px;
+
   /*font-weight: bold;*/
   font-size: 21px;
   line-height: 18px;
-  text-align: center;
+  /*text-align: center;*/
   color: rgb(238, 54, 67);
   border: 3px solid rgb(255, 255, 255);
 }
 
 .address {
-  padding-top: 10px;
+  margin-top: 5px;
+  text-align: center;
+  /*padding-top: 10px;*/
   font-size: 14px;
   line-height: 24px;
   /*font-weight: bold;*/
@@ -206,33 +223,58 @@ form input[type="text"] {
 
 
 nav {
-  width: auto;
-  margin-bottom: 60px;
-  padding: 20px 0;
-  background-color: rgb(50, 66, 92);
-  border-bottom: 5px solid rgb(41, 52, 73);
+  /*width: 920px;*/
+  padding: 0;
+  margin: 0;
+  margin-bottom: 55px;
+  /*margin: 0 10px;*/
+  /*padding: 20px 0;*/
   list-style: none;
+  font-size: 0;
+  background-color: rgb(255, 0, 0);
 }
 
-nav li {
+.main-menu li {
   display: inline-block;
-  margin-right: 60px;
+  text-align: left;
+  /*margin-right: 60px;*/
+
+  /*padding-top: 19px;*/
+  /*padding-bottom: 19px;*/
+
+
 }
 
-nav li:last-child {
-  margin-right: 0;
+.main-menu li:last-child {
+  /*margin-right: 0;*/
 }
 
-nav li a {
+.main-menu a {
+  display: block;
+  padding: 20px 30px;
   font-size: 17px;
   line-height: 17px;
   text-decoration: none;
+  /*vertical-align: middle;*/
   color: rgb(255, 255, 255);
+  background-color: rgb(50, 66, 92);
+  border-bottom: 5px solid rgb(41, 52, 73);
+}
+
+.main-menu a:hover {
+  background-color: rgb(41, 52, 73);
+  /*border-bottom: 5px solid rgb(41, 52, 73);*/
+}
+
+.main-menu a:active {
+  background-color: rgb(29, 39, 57);
+  border-bottom: 5px solid rgb(29, 39, 57);
+  color: rgb(134, 140, 149);
 }
 
 /*  ПромоБлок*/
 .promo {
-  margin-bottom: 53px;
+  margin-bottom: 33px;
 }
 
 .promo-item {
@@ -289,37 +331,71 @@ nav li a {
 }
 
 /* Промо Слайдер  */
+
+.promo-slides {
+  position: relative;
+}
+
 .promo-slide {
+  position: relative;
   float: left;
   width: 620px;
   height: 266px;
 }
+
+
 
 .promo-slide2 {
   display: none;
 }
 
 .promo-slide h2 {
+  position: absolute;
+  top: 0;
+  left: 26px;
+  color: rgb(255, 255, 255);
   font-size: 36px;
   line-height: 30px;
-  font-weight: bold;
+  /*font-weight: bold;*/
+
 }
 
 .promo-slide p {
+  position: absolute;
+  top: 50px;
+  left: 26px;
+
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
+  color: rgb(255, 255, 255);
+}
+
+.promo-btn-slider {
+  position: absolute;
+  top: 350px;
+  left: 26px;
+}
+
+.promo-slide input[type="radio"] {
+  position: absolute;
+  top: 200px;
+  left: 300px;
 }
 
 /*   Популярные товары   */
+.popular {
+
+}
+
 .popular-title {
-  width: auto;
+  /*width: auto;*/
   background-color: rgb(247, 243, 236);
   margin-bottom: 20px;
   padding-left: 30px;
-  padding-top: 25px;
+  /*padding-top: 25px;*/
   padding-right: 25px;
-  padding-bottom: 25px;
+  /*padding-bottom: 25px;*/
 }
 
 .popular-title h2 {
@@ -345,6 +421,7 @@ nav li a {
 .popular-btn {
   float: right;
   width: 253px;
+  margin-top: 16px;
 }
 
 .product-list {

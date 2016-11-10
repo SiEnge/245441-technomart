@@ -28,7 +28,7 @@ header {
 .header-top {
   /*width: auto;*/
   margin-bottom: 48px;
-  padding-bottom: 42px;
+  /*padding-bottom: 42px;*/
   background-color: rgb(41, 52, 73);
   /*background-color: rgb(25, 0, 0);*/
 }
@@ -47,7 +47,8 @@ header {
   text-decoration: none;
   color: rgb(255, 255, 255);
   background-color: rgb(238, 54, 67);
-  border-bottom: 5px solid rgb(181, 41, 51);
+  box-shadow: 0 5px 0 0 rgb(181, 41, 51);
+  /*border-bottom: 5px solid rgb(181, 41, 51);*/
 }
 
 .header-logo:hover {
@@ -61,10 +62,10 @@ header {
   border-color: rgb(142, 30, 38);
 }
 
-header form {
+.header-top form {
   float: left;
-  width: 270px;
-  padding: 13px 0;
+  width: 200px;
+  /*padding: 13px 0;*/
 }
 
 form input[type="submit"] {
@@ -99,20 +100,11 @@ form input[type="text"] {
 }
 
 .header-bookmarks {
-  position: relative;
+  /*position: relative;*/
 
 }
 
-.header-bookmarks .icon  {
-  position: absolute;
-  top: 0;
-  left: 0;
 
-  width: 20px;
-  height: 20px;
-  background: url("img/icon-ig.png") no-repeat 0 0;
-
-}
 
 
 .header-order a {
@@ -147,6 +139,8 @@ form input[type="text"] {
   background-color: rgb(81, 133, 52);
   color: rgb(170, 195, 155);
 }
+
+
 
 .header-middle {
   width: auto;
@@ -222,31 +216,17 @@ form input[type="text"] {
 
 
 
-nav {
-  /*width: 920px;*/
+.main-menu {
   padding: 0;
   margin: 0;
   margin-bottom: 55px;
-  /*margin: 0 10px;*/
-  /*padding: 20px 0;*/
-  list-style: none;
   font-size: 0;
-  background-color: rgb(255, 0, 0);
+  list-style: none;
+  background-color: rgb(50, 66, 92);
 }
 
 .main-menu li {
   display: inline-block;
-  text-align: left;
-  /*margin-right: 60px;*/
-
-  /*padding-top: 19px;*/
-  /*padding-bottom: 19px;*/
-
-
-}
-
-.main-menu li:last-child {
-  /*margin-right: 0;*/
 }
 
 .main-menu a {
@@ -255,15 +235,17 @@ nav {
   font-size: 17px;
   line-height: 17px;
   text-decoration: none;
-  /*vertical-align: middle;*/
   color: rgb(255, 255, 255);
   background-color: rgb(50, 66, 92);
   border-bottom: 5px solid rgb(41, 52, 73);
 }
 
+.main-menu li:first-child a {
+  padding-left: 52px;
+}
+
 .main-menu a:hover {
   background-color: rgb(41, 52, 73);
-  /*border-bottom: 5px solid rgb(41, 52, 73);*/
 }
 
 .main-menu a:active {
@@ -279,12 +261,14 @@ nav {
 
 .promo-item {
   float: right;
-  width: 277px;
+  width: 147px;
   height: 123px;
+
   margin-left: 20px;
   margin-bottom: 20px;
   padding-left: 23px;
-  font-size: 16px;
+  padding-right: 130px;
+  /*font-size: 16px;*/
   color: rgb(255, 255, 255);
 }
 
@@ -293,21 +277,26 @@ nav {
 }
 
 .promo-item h3 {
-  font-size: 24x;
+  font-size: 24px;
   line-height: 30px;
+  margin-bottom: 10px;
 }
 
 .promo-btn {
   display: block;
   width: 135px;
-  padding: 13px 0;
+  padding: 10px 0;
+  margin-left: 2px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
   color: rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+
+
 }
 
 .promo-material {
@@ -488,8 +477,15 @@ nav {
 }
 
 .brand-item {
+  position: relative;
   height: 145px;
   margin-bottom: 20px;
+}
+
+.brand-item img {
+  position: absolute;
+  top: 25%;
+  left: 25%;
 }
 
 /*   Сервис   */

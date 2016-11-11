@@ -22,16 +22,9 @@
           <input type="submit" class="btn-search">
           <input name="search" type="text" placeholder="Поиск">
         </form>
-        <div class="header-order">
-          <a href="#">Оформить заказ</a>
-        </div>
-        <div class="header-cart">
-          <a href="#">Корзина: 0</a>
-        </div>
-        <div class="header-bookmarks">
-          <!-- <div class="icon"></div> -->
-          <a href="#">Закладки: 0</a>
-        </div>
+          <a class="header-order" href="#">Оформить заказ</a>
+          <a class="header-cart" href="#">Корзина: 0</a>
+          <a class="header-bookmarks" href="#">Закладки: 0</a>
       </div>
     </div>
 
@@ -146,31 +139,32 @@
 
       <div class="popular">
         <div class="popular-title clearfix">
-          <h2> Популярные товары</h2>
+          <h2> Популярные товары:</h2>
           <a class="btn popular-btn" href="#">Все популярные товары</a>
         </div>
         <div class="product-list">
-          <div class="product-item product-item-new">
-            <img src="img/product-1.jpg" width="184" height="164" alt="">
-            <p>Перфоратор BOSCH BFG 9000</p>
+          <div class="product-item">
+            <img src="img/product-1.jpg" width="200" height="140" alt="">
+            <span class="product-name">Перфоратор BOSCH BFG 9000</span>
             <span class="product-price-strike">32500 р.</span>
             <span class="product-price">25500 p.</span>
           </div>
-          <div class="product-item product-item-new">
-            <img src="img/product-2.jpg" width="127" height="112" alt="">
-            <p>Перфоратор BOSCH BFG 3000</p>
+          <div class="product-item">
+            <img src="img/product-2.jpg" width="200" height="140" alt="">
+            <span class="product-name">Перфоратор BOSCH BFG 3000</span>
             <span class="product-price-strike">22500 р.</span>
             <span class="product-price">15500 p.</span>
           </div>
-          <div class="product-item product-item-new">
-            <img src="img/product-3.jpg" width="144" height="128" alt="">
-            <p>Перфоратор BOSCH BFG 6000</p>
+          <div class="product-item">
+            <img src="img/product-3.jpg" width="200" height="140" alt="">
+            <span class="product-name">Перфоратор BOSCH BFG 6000</span>
             <span class="product-price-strike">30500 р.</span>
             <span class="product-price">25500 p.</span>
           </div>
-          <div class="product-item product-item-new">
-            <img src="img/product-4.jpg" width="127" height="112" alt="">
-            <p>Перфоратор BOSCH BFG 2000</p>
+          <div class="product-item">
+            <div class="product-item-new"></div>
+            <img src="img/product-2.jpg" width="200" height="140" alt="">
+            <span class="product-name">Перфоратор BOSCH BFG 2000</span>
             <span class="product-price-strike"></span>
             <span class="product-price">12500 p.</span>
           </div>
@@ -182,33 +176,33 @@
 
       <div class="popular">
         <div class="popular-title clearfix">
-          <h2> Популярные производители</h2>
+          <h2> Популярные производители:</h2>
           <a class="btn popular-btn" href="#">Все производители</a>
         </div>
         <div class="brand-list">
           <a class="brand-item" href="#">
-            <img src="img/pop-logo-1.jpg" width="126" height="37" alt="BOSCH">
+            <img src="img/brand-bosch.png" width="200" height="120" alt="BOSCH">
           </a>
           <a class="brand-item" href="#">
-            <img src="img/pop-logo-2.jpg" width="123" height="40" alt="Makita">
+            <img src="img/brand-makita.png" width="200" height="120" alt="Makita">
           </a>
           <a class="brand-item" href="#">
-            <img src="img/pop-logo-3.jpg" width="146" height="44" alt="DeWALT">
+            <img src="img/brand-dewalt.png" width="200" height="120" alt="DeWALT">
           </a>
           <a class="brand-item" href="#">
-            <img src="img/pop-logo-4.jpg" width="200" height="88" alt="ИНТЕРСКОЛ">
+            <img src="img/brand-interskol.png" width="200" height="120" alt="ИНТЕРСКОЛ">
           </a>
           <a class="brand-item" href="#">
-            <img src="img/pop-logo-5.jpg" width="169" height="31" alt="HITACHI">
+            <img src="img/brand-hitachi.png" width="200" height="120" alt="HITACHI">
           </a>
           <a class="brand-item" href="#">
-            <img src="img/pop-logo-6.jpg" width="121" height="73" alt="LG">
+            <img src="img/brand-lg.png" width="200" height="120" alt="LG">
           </a>
           <a class="brand-item" href="#">
-            <img src="img/pop-logo-7.jpg" width="151" height="96" alt="AEG">
+            <img src="img/brand-aeg.png" width="200" height="120" alt="AEG">
           </a>
           <a class="brand-item" href="#">
-            <img src="img/pop-logo-8.jpg" width="204" height="69" alt="METABO">
+            <img src="img/brand-metabo.png" width="200" height="120" alt="METABO">
           </a>
         </div>
       </div>
@@ -222,10 +216,11 @@
         <p>Хороший интернет-магазин отличается от плохого не только ценами! <br>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 
         <div class="service-tabslider">
+
           <div class="service-tabs">
-            <div class="service-tab">Доставка</div>
-            <div class="service-tab">Гарантия</div>
-            <div class="service-tab">Кредит</div>
+            <div class="service-tab service-shipping service-tab-checked">Доставка</div>
+            <div class="service-tab service-guarantee">Гарантия</div>
+            <div class="service-tab service-credit">Кредит</div>
           </div>
 
           <div class="service-tabslides serv-1">

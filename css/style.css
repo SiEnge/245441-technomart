@@ -85,9 +85,9 @@ form input[type="text"] {
   color: rgb(255, 255, 255);
 }
 
-.header-bookmarks a,
-.header-cart a {
-  /*position: relative;*/
+.header-bookmarks,
+.header-cart{
+  position: relative;
   float: right;
   width: 90px;
   padding: 12px 0;
@@ -99,15 +99,8 @@ form input[type="text"] {
   color: rgb(255, 255, 255);
 }
 
-.header-bookmarks {
-  /*position: relative;*/
-
-}
-
-
-
-
-.header-order a {
+.header-order {
+  position: relative;
   float: right;
   width: 150px;
   padding: 12px 0;
@@ -119,28 +112,60 @@ form input[type="text"] {
   color: rgb(255, 255, 255);
 }
 
-.header-bookmarks a:hover,
-.header-cart a:hover {
-  background-color: rgb(33, 42, 58);
-  /*color: rgb(255, 0, 0);*/
+.header-bookmarks::before,
+.header-cart::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  width: 20px;
+  height: 20px;
+  /*background: url("../img/spritesheet.png") no-repeat 0 0;*/
+  opacity: 0.3;
 }
 
-.header-order a:hover {
+.header-bookmarks::before {
+  background: url("../img/icon-bookmark.png") no-repeat 0 0;
+}
+
+.header-cart::before {
+  background: url("../img/icon-basket.png") no-repeat 0 0;
+}
+
+.header-bookmarks:hover,
+.header-cart:hover {
+  background-color: rgb(33, 42, 58);
+}
+
+.header-bookmarks:hover::before,
+.header-cart:hover::before {
+  opacity: 1;
+}
+
+.header-order:hover {
   background-color: rgb(95, 187, 45);
 }
 
-.header-bookmarks a:active,
-.header-cart a:active {
+.header-bookmarks:active,
+.header-cart:active {
   background-color: rgb(22, 29, 41);
   color: rgb(139, 142, 148);
 }
 
-.header-order a:active {
+.header-bookmarks:active::before,
+.header-cart:active::before {
+  opacity: 0.3;
+}
+
+.header-order:active {
   background-color: rgb(81, 133, 52);
   color: rgb(170, 195, 155);
 }
 
-
+.header-bookmarks-add,
+.header-cart-add {
+  background-color: rgb(238, 54, 67);
+}
 
 .header-middle {
   width: auto;
@@ -219,7 +244,8 @@ form input[type="text"] {
 .main-menu {
   padding: 0;
   margin: 0;
-  margin-bottom: 55px;
+  margin-bottom: 60px;
+  padding-left: 22px;
   font-size: 0;
   list-style: none;
   background-color: rgb(50, 66, 92);
@@ -231,17 +257,13 @@ form input[type="text"] {
 
 .main-menu a {
   display: block;
-  padding: 20px 30px;
+  padding: 18px 30px;
   font-size: 17px;
   line-height: 17px;
   text-decoration: none;
   color: rgb(255, 255, 255);
   background-color: rgb(50, 66, 92);
   border-bottom: 5px solid rgb(41, 52, 73);
-}
-
-.main-menu li:first-child a {
-  padding-left: 52px;
 }
 
 .main-menu a:hover {
@@ -256,11 +278,14 @@ form input[type="text"] {
 
 /*  ПромоБлок*/
 .promo {
+  /*position: relative;*/
   margin-bottom: 33px;
 }
 
 .promo-item {
+  /*position: relative;*/
   float: right;
+  display: block;
   width: 147px;
   height: 123px;
 
@@ -292,31 +317,37 @@ form input[type="text"] {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  color: rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
+  color: rgb(255, 255, 255);
+}
 
+.promo-btn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
+.promo-btn:active {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .promo-material {
-  background-color: rgb(246, 178, 45);
+  background: rgb(246, 178, 45) url("../img/promo-1.png") no-repeat 213px 31px;
 }
 
 .promo-tool {
-  background-color: rgb(74, 175, 222);
+  background: rgb(74, 175, 222) url("../img/promo-2.png") no-repeat 197px 34px;
 }
 
 .promo-equipment {
-  background-color: rgb(204, 121, 209);
+  background: rgb(204, 121, 209) url("../img/promo-3.png") no-repeat 191px 31px;
 }
 
 .promo-discount {
-  background-color: rgb(133, 209, 121);
+  background: rgb(133, 209, 121) url("../img/promo-4.png") no-repeat 196px 26px;
 }
 
 .promo-shipping {
-  background-color: rgb(246, 178, 45);
+  background: rgb(246, 178, 45) url("../img/promo-5.png") no-repeat 191px 32px;
 }
 
 /* Промо Слайдер  */
@@ -333,7 +364,6 @@ form input[type="text"] {
 }
 
 
-
 .promo-slide2 {
   display: none;
 }
@@ -345,6 +375,7 @@ form input[type="text"] {
   color: rgb(255, 255, 255);
   font-size: 36px;
   line-height: 30px;
+  text-transform: uppercase;
   /*font-weight: bold;*/
 
 }
@@ -362,6 +393,7 @@ form input[type="text"] {
 
 .promo-btn-slider {
   position: absolute;
+  width: 175px;
   top: 350px;
   left: 26px;
 }
@@ -380,23 +412,31 @@ form input[type="text"] {
 .popular-title {
   /*width: auto;*/
   background-color: rgb(247, 243, 236);
+
   margin-bottom: 20px;
   padding-left: 30px;
-  /*padding-top: 25px;*/
+  padding-top: 25px;
   padding-right: 25px;
-  /*padding-bottom: 25px;*/
+  padding-bottom: 25px;
+  vertical-align: middle;
 }
 
 .popular-title h2 {
+  margin: 0;
+  padding: 0;
   float: left;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  margin-top: 3px;
+  font-weight: lighter;
+
   color: rgb(50, 66, 92);
+  /*background-color: rgb(255, 0, 0);*/
 }
 
 .btn {
-  padding: 15px 10px;
+  padding: 10px 10px;
   font-size: 14px;
   line-height: 18px;
   text-decoration: none;
@@ -407,10 +447,18 @@ form input[type="text"] {
   border-radius: 3px;
 }
 
+.btn:hover {
+  background-color: rgb(202, 44, 55);
+}
+
+.btn:active {
+  background-color: rgb(186, 39, 50);
+}
+
 .popular-btn {
   float: right;
-  width: 253px;
-  margin-top: 16px;
+  width: 233px;
+  /*margin-top: 25px;*/
 }
 
 .product-list {
@@ -421,45 +469,61 @@ form input[type="text"] {
 
 .product-item,
 .brand-item {
+  position: relative;
   display: inline-block;
   width: 218px;
   margin-right: 20px;
   font-weight: bold;
   font-family: "PT Sans", sans-serif;
-
-  text-align: center;
   vertical-align: top;
   border: 1px solid rgb(229, 229, 229);
 }
 
-.product-item p {
-  padding: 0 30px;
+.product-item img {
+  position: absolute;
+  margin-left: -100px;
+  /*margin-top: -70px;*/
+  top: 10px;
+  left: 50%;
+}
+
+.product-name {
+  position: absolute;
+  bottom: 96px;
+  left: 0;
+  margin-left: 20px;
+  margin-right: 20px;
   font-size: 18px;
+  text-align: center;
   line-height: 20px;
   font-weight: bold;
 }
 
-.product-price-strike {
-  display: block;
-  margin-bottom: 15px;
-  /*font-weight: bold;*/
+ .product-price,
+ .product-price-strike {
+  position: absolute;
+  padding: 12px 35px;
+  font-size: 14px;
   font-size: 17px;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+.product-price-strike {
+  bottom: 60px;
+  left: 42px;
   text-decoration: line-through;
   color: rgb(153, 153, 153);
 }
 
 .product-price {
-  padding: 12px 35px;
-  font-size: 14px;
-  /*font-weight: bold;*/
-  font-size: 17px;
-  line-height: 18px;
-  text-transform: uppercase;
+  bottom: 20px;
+  left: 42px;
   color: rgb(255, 255, 255);
   background-color: rgb(238, 54, 67);
+  border-radius: 3px;
 }
+
 
 .product-list .product-item:nth-child(4n),
 .brand-item:nth-child(4n) {
@@ -470,6 +534,18 @@ form input[type="text"] {
   height: 316px;
 }
 
+.product-item-new {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  background: url("../img/new.png") no-repeat 0 0;
+}
+
+
+
 .brand-list {
   margin-bottom: 65px;
   font-size: 0;
@@ -477,52 +553,118 @@ form input[type="text"] {
 }
 
 .brand-item {
-  position: relative;
-  height: 145px;
+  height: 143px;
   margin-bottom: 20px;
 }
 
 .brand-item img {
   position: absolute;
-  top: 25%;
-  left: 25%;
+  margin-left: -100px;
+  margin-top: -60px;
+  top: 50%;
+  left: 50%;
 }
+
+.product-item:hover,
+.brand-item:hover {
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.brand-item:active {
+  box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+
+.brand-item:active img {
+  opacity: 0.5;
+}
+
 
 /*   Сервис   */
 .services {
   margin-bottom: 80px;
-  padding-top: 65px;
+  padding-top: 70px;
   background-color: rgb(242, 246, 248);
 }
 
 .services h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
   font-size: 30px;
   line-height: 24px;
   text-transform: uppercase;
+  font-weight: lighter;
 }
 
 .services p {
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 24px;
+  /*font-weight: bold;*/
 }
 
 .service-tabs {
+  position: relative;
   float: left;
   width: 240px;
+  height: 280px;
   margin-right: 80px;
   padding-top: 25px;
   padding-bottom: 45px;
 }
 
 .service-tab {
-  width: auto;
-  padding: 20px 23px;
+  width: 200px;
+  height: 27px;
+  padding: 17px 20px;
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
   color: rgb(255, 255, 255);
   background-color: rgb(50, 66, 92);
+  box-shadow:
+    inset 0 -2px 0 0 rgb(41, 52, 73),
+    inset 0 2px 0 0 rgb(64, 80, 105);
+  /*margin-bottom: 5px;*/
+}
+
+.service-tab-checked {
+  color: rgb(50, 66, 92);
+  background-color: rgb(255, 255, 255);
+  box-shadow:
+    inset 0 -2px 0 0 rgb(234, 234, 234),
+    inset 0 2px 0 0 rgb(246, 246, 246);
+}
+
+.service-shipping {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+.service-guarantee {
+  position: absolute;
+  top: 111px;
+  left: 0;
+}
+
+.service-credit {
+  position: absolute;
+  top: 172px;
+  left: 0;
+}
+
+
+.service-tabs::after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 279px;
+  /*background-color: rgb(255, 0, 0);*/
+  background: url("../img/vert-shadow.png") no-repeat 0 0;
 }
 
 .service-tabslides {

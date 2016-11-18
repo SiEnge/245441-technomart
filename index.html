@@ -14,7 +14,7 @@
     <div class="header-top">
       <div class="container">
         <a class="header-logo" href="index.html">Техномарт</a>
-        <form>
+        <form class="search">
           <input class="search-btn" type="submit">
           <input class="search-input" name="search" type="text" placeholder="Поиск">
         </form>
@@ -48,13 +48,13 @@
     <div class="container">
       <nav>
         <ul class="main-menu ">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Компания</a></li>
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="company.html">Компания</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="action.html">Спецпредложения</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -83,8 +83,6 @@
             <label for="slide-1"></label>
             <label for="slide-2"></label>
           </div>
-          <div class="promo-arrow-prev"></div>
-          <div class="promo-arrow-next"></div>
           <div class="promo-slides">
             <div class="promo-slide">
               <h2>Перфораторы</h2>
@@ -95,6 +93,8 @@
               <p>Соседям на радость!</p>
             </div>
           </div>
+          <div class="promo-arrow-prev"></div>
+          <div class="promo-arrow-next"></div>
           <a class="btn promo-btn-slider" href="catalog.html">Открыть каталог</a>
         </div>
         <div class="promo-item promo-discount">
@@ -285,22 +285,36 @@
       </div>
     </div>
   </footer>
-  <!-- Модальное окно -->
+
+  <!-- Модальное окно "Напишите нам"-->
   <div class="modal-write-us">
+    <button class="modal-content-close" type="button" title="Закрыть">
+      Закрыть
+    </button>
     <form class="form-write-us" action="index.html" method="post">
-      <div class="form-left">
-        <label for="name">Ваше имя:</label>
-        <input class="name" id="name" type="text" placeholder="Представьтесь, пожалуйста">
+      <div class="form-text">
+        <div class="form-left">
+          <label for="name">Ваше имя:</label>
+          <input class="name" id="name" type="text" placeholder="Представьтесь, пожалуйста">
+        </div>
+        <div class="form-right">
+          <label for="email">Ваше e-mail:</label>
+          <input class="email" id="email" type="text" placeholder="Для отправки ответа">
+        </div>
+        <label for="textmail">Текст письма:</label>
+        <textarea class="textmail" id="textmail" rows="5">В свободной форме</textarea>
       </div>
-      <div class="form-right">
-        <label for="email">Ваше e-mail:</label>
-        <input class="email" id="email" type="text" placeholder="Для отправки ответа">
+      <div class="form-btn">
+        <input class="btn btn-write-us" type="submit" value="Отправить">
       </div>
-      <label for="textmail">Текст письма:</label>
-      <textarea class="textmail" id="textmail">В свободной форме</textarea>
-      <input class="btn" type="submit" value="Отправить">
     </form>
   </div>
+  <!-- Всплывающее окно "Карта"-->
+  <div class="modal-map">
+    <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+    <div id="yandex-map"></div>
+  </div>
+  <div class="modal-overlay"></div>
 </body>
 
 </html>

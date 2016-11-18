@@ -18,7 +18,7 @@
       <div class="container">
         <a class="header-logo" href="index.html">Техномарт</a>
         <form>
-          <input class="search-btn" type="submit">
+          <!-- <input class="search-btn" type="submit"> -->
           <input class="search-input" name="search" type="text" placeholder="Поиск">
         </form>
         <a class="header-bookmarks" href="#">Закладки: 0</a>
@@ -45,7 +45,7 @@
           <a class="user-block-btn btn-out" href="#">Out</a>
           <a class="user-block-btn btn-user" href="#">Равшан Джамшутович</a>
           <div class="user-block-info">
-            <a href="#">Мои заказы</a> •
+            <a href="#">Мои заказы</a> &#8226;
             <a href="#">Личный кабинет</a>
           </div>
         </div>
@@ -58,13 +58,13 @@
     <div class="container">
       <nav>
         <ul class="main-menu ">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Компания</a></li>
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="company.html">Компания</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="action.html">Спецпредложения</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -84,11 +84,11 @@
         <h1>Перфораторы</h1>
       </div>
 
-      <div class="cat-container clearfix">
+      <div class="cat-container">
 
         <!-- Фильтр -->
         <div class="cat-filter">
-          <div class="cat-title clearfix">
+          <div class="cat-title">
             <h3>Фильтр:</h3>
           </div>
           <form method="get">
@@ -140,10 +140,10 @@
           <div class="cat-title">
             <h3>Cортировка:</h3>
             <div class="sort-attribute">
-              <a class="sort-price" href="#">По цене</a>
+              <a class="sort-price active" href="#">По цене</a>
               <a class="sort-type" href="#">По типу</a>
               <a class="sort-function" href="#">По функционалу</a>
-              <a class="sort-up" href="#">вз</a>
+              <a class="sort-up active" href="#">вз</a>
               <a class="sort-down" href="#">уб</a>
             </div>
           </div>
@@ -300,5 +300,25 @@
       </div>
     </div>
   </footer>
+
+  <!-- Модальное окно "Товар добавлен в корзину"-->
+  <div class="modal-product-add">
+    <button class="modal-content-close" type="button" title="Закрыть">
+      Закрыть
+    </button>
+
+    <div class="modal-check">
+      <div class="check"></div>
+      <p class="check-text">Товар добавлен в корзину!</p>
+    </div>
+
+
+    <div class="form-btn">
+      <a class="btn btn-checkout">Оформить заказ</a>
+      <a class="btn btn-continue">Продолжить покупки</a>
+    </div>
+
+  </div>
 </body>
+
 </html>

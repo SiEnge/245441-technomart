@@ -2,8 +2,8 @@
   	var popup = document.querySelector(".modal-write-us");
   	var close = popup.querySelector(".modal-content-close");
   	var form = popup.querySelector(".form-write-us");
-  	var names = popup.querySelector("[name=write-us-name]");
-  	var email = popup.querySelector("[name=write-us-email]");
+  	var names = popup.querySelector("[id=write-us-name]");
+  	var email = popup.querySelector("[id=write-us-email]");
   	var storage = localStorage.getItem("name");
 
   	link.addEventListener("click", function(event) {

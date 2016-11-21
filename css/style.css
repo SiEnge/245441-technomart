@@ -102,14 +102,7 @@ header::after {
   padding-left: 50px;
   opacity: 0.3;
 }
-/*
-.seacrh input::-moz-placeholder {
-  color: rgb(255, 255, 255);
-}
 
-.seacrh input::-webkit-input-placeholder {
-  color: rgb(255, 255, 255);
-}*/
 
 form .search-input:focus {
   background: rgb(255, 255, 255) url("../img/icon-search-active.png") no-repeat 17px 12px;
@@ -510,7 +503,7 @@ form:hover .search-input {
   border: 1px solid rgb(133, 209, 121);
 }
 
-.promo-shipping {
+.promo-delivery {
   background: rgb(246, 178, 45) url("../img/promo-5.png") no-repeat 190px 31px;
   border: 1px solid rgb(246, 178, 45);
 }

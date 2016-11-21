@@ -1,16 +1,23 @@
- // Всплывающее окно "Товар добавлен в корзину"   
+ // Всплывающее окно "Товар добавлен в корзину"
 
-    var tocart = document.querySelector(".btn-tocart");
-// работает только с первым селектором .btn-tocart 
-
+    var tocart = document.querySelectorAll(".btn-tocart");
     var cart_add = document.querySelector(".modal-product-add");
     var cart_close = cart_add.querySelector(".modal-content-close");
     var cart_conti = cart_add.querySelector(".btn-continue");
 
 
-    tocart.addEventListener("click", function(event) {
-      event.preventDefault();
-      cart_add.classList.add("modal-show");
+    // for (var i = 0; i < tocart.lenght; i++) {
+    //     tocart[i].addEventListener("click", function(event) {
+    //     event.preventDefault();
+    //     cart_add.classList.add("modal-show");
+    //   })
+    // };
+
+    Array.prototype.forEach.call(tocart, function(button) {
+      button.addEventListener("click", function(event) {
+        event.preventDefault();
+        cart_add.classList.add("modal-show");
+      });
     });
 
     cart_close.addEventListener("click", function(event) {

@@ -1,23 +1,16 @@
 body {
   min-width: 960px;
   font-size: 14px;
-  font-family: "Cuprum", "PT Sans", "Arial", sans-serif;
+  font-family: "Cuprum", "PT Sans", sans-serif;
   color: black;
-}
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 .container {
   width: 940px;
   padding: 0 10px;
   margin: 0 auto;
-    /*border: 2px solid rgb(255, 0, 0);*/
 }
-
+/*Хедер*/
 header {
   width: auto;
   background-color: rgb(241, 245, 247);
@@ -47,10 +40,10 @@ header::after {
   padding-top: 10px;
   font-size: 24px;
   line-height: 24px;
-  text-align: center;
   text-transform: uppercase;
-  text-decoration: none;
   font-weight: lighter;
+  text-align: center;
+  text-decoration: none;
   color: rgb(255, 255, 255);
   background-color: rgb(238, 54, 67);
   box-shadow: 0 5px 0 0 rgb(181, 41, 51);
@@ -65,12 +58,12 @@ header::after {
   background-color: rgb(186, 39, 50);
   border-color: rgb(142, 30, 38);
 }
-
+/*Форма поиска*/
 .header-top form {
-  padding: 0;
-  margin: 0;
   float: left;
   width: 270px;
+  padding: 0;
+  margin: 0;
 }
 
 .search-btn {
@@ -80,34 +73,31 @@ header::after {
   width: 45px;
   height: 42px;
   padding: 0;
-  border: none;
   font-size: 0;
-  opacity: 0;
   background: transparent;
+  border: none;
+  opacity: 0;
 }
 
 .search-input {
   position: relative;
-  width: 225px;
   float: left;
-  font-family: "Cuprum", "PT sans", sans-serif;
-  font-size: 17px;
-  background: url("../img/icon-search.png") no-repeat 17px 12px;
-  line-height: 18px;
-  background-color: rgb(41, 52, 73);
-  color: rgb(255, 255, 255);
-  font-weight: bolder;
-  border: none;
+  width: 225px;
   padding: 12px 0;
   padding-left: 50px;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bolder;
+  font-family: "Cuprum", "PT sans", sans-serif;
+  color: rgb(255, 255, 255);
+  background: rgb(41, 52, 73) url("../img/icon-search.png") no-repeat 17px 12px;
+  border: none;
   opacity: 0.3;
 }
 
-
 form .search-input:focus {
-  background: rgb(255, 255, 255) url("../img/icon-search-active.png") no-repeat 17px 12px;
-  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255) url("../img/icon-search-active.png") no-repeat 17px 12px;
   opacity: 1;
 }
 
@@ -151,8 +141,8 @@ form:hover .search-input {
   line-height: 18px;
   text-align: center;
   text-decoration: none;
-  background-color: rgb(99, 166, 62);
   color: rgb(255, 255, 255);
+  background-color: rgb(99, 166, 62);
 }
 
 .header-bookmarks::before,
@@ -163,7 +153,6 @@ form:hover .search-input {
   left: 17px;
   width: 20px;
   height: 20px;
-  /*background: url("../img/spritesheet.png") no-repeat 0 0;*/
   opacity: 0.3;
 }
 
@@ -224,13 +213,10 @@ form:hover .search-input {
 .lids {
   float: left;
   width: 247px;
-  margin: 0;
-  margin-right: 20px;
-  margin-left: 53px;
-  margin-top: 3px;
+  margin: 3px 20px 0 53px;
+  font-style: italic;
   font-size: 16px;
   line-height: 23px;
-  font-style: italic;
   color: rgb(238, 54, 67);
 }
 
@@ -241,12 +227,9 @@ form:hover .search-input {
 .phone {
   position: relative;
   width: 172px;
-  padding: 10px 0;
-  padding-left: 72px;
-  padding-right: 20px;
+  padding: 10px 20px 10px 72px;
   font-size: 21px;
   line-height: 18px;
-  /*font-weight: bold;*/
   color: rgb(238, 54, 67);
   border: 3px solid rgb(255, 255, 255);
 }
@@ -263,17 +246,15 @@ form:hover .search-input {
 
 .address {
   margin-top: 5px;
-  text-align: center;
   font-size: 14px;
   line-height: 24px;
-  /*font-weight: bold;*/
+  text-align: center;
   color: rgb(50, 66, 92);
 }
 
 .user-block {
   float: right;
   width: 300px;
-  /*background-color: rgb(255, 0, 0);*/
 }
 
 .user-block-btn {
@@ -284,8 +265,8 @@ form:hover .search-input {
   font-size: 21px;
   line-height: 18px;
   text-decoration: none;
-  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
 }
 
 .user-block-btn:hover {
@@ -324,7 +305,6 @@ form:hover .search-input {
   font-size: 0;
   margin-left: 0;
   padding-left: 20px;
-  /*padding-right: 20px;*/
 }
 
 .btn-out::before {
@@ -376,9 +356,8 @@ form:hover .search-input {
 .user-block-info a:active {
   color: rgb(190, 197, 206);
 }
-
+/*Главное меню*/
 .main-menu {
-  padding: 0;
   margin: 0;
   margin-bottom: 59px;
   padding-left: 22px;
@@ -395,10 +374,7 @@ form:hover .search-input {
 
 .main-menu a {
   display: block;
-  padding-top: 19px;
-  padding-right: 31px;
-  padding-bottom: 18px;
-  padding-left: 30px;
+  padding: 19px 31px 18px 30px;
   font-size: 17px;
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -415,7 +391,6 @@ form:hover .search-input {
   border-bottom: 5px solid rgb(29, 39, 57);
   opacity: 0.5;
 }
-
 /*  ПромоБлок*/
 .promo {
   margin-top: 59px;
@@ -434,10 +409,8 @@ form:hover .search-input {
   display: block;
   width: 147px;
   height: 121px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  padding-left: 21px;
-  padding-right: 130px;
+  margin: 0 0 20px 20px;
+  padding: 0 130px 0 21px;
   color: rgb(255, 255, 255);
 }
 
@@ -446,28 +419,24 @@ form:hover .search-input {
 }
 
 .promo-item h3 {
-  margin: 0;
-  margin-top: 20px;
+  margin: 20px 0 12px 0;
   font-size: 24px;
   line-height: 30px;
-  margin-bottom: 12px;
 }
 
 .promo-btn {
   display: block;
   width: 135px;
-  /*padding: 10px 0;*/
-  padding-top: 11px;
-  padding-bottom: 9px;
   margin-left: 1px;
+  padding: 11px 0 9px 0;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+  color: rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-  color: rgb(255, 255, 255);
 }
 
 .promo-material .promo-btn,
@@ -507,9 +476,7 @@ form:hover .search-input {
   background: rgb(246, 178, 45) url("../img/promo-5.png") no-repeat 190px 31px;
   border: 1px solid rgb(246, 178, 45);
 }
-
 /* Промо Слайдер  */
-
 .promo-slider {
   position: relative;
   float: left;
@@ -526,23 +493,23 @@ form:hover .search-input {
   position: absolute;
   bottom: 38px;
   left: 50%;
+  z-index: 100;
   width: 100px;
   height: 10px;
   margin-left: -50px;
   text-align: center;
-  z-index: 100;
 }
 
 .promo-controls label {
   display: inline-block;
   width: 6px;
   height: 6px;
-  background-color: rgb(255, 255, 255);
-  border: 2px solid rgb(255, 255, 255);
   margin: 0 3px;
-  border-radius: 50%;
   text-align: top;
   vertical-align: top;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
 }
 
 #slide-1:checked ~ .promo-controls label[for="slide-1"],
@@ -565,9 +532,7 @@ form:hover .search-input {
   display: block;
   margin: 0;
   width: 290px;
-  margin-top: 26px;
-  margin-left: 24px;
-  margin-bottom: 4px;
+  margin: 26px 0 4px 24px;
   color: rgb(255, 255, 255);
   font-size: 36px;
   line-height: 30px;
@@ -586,10 +551,7 @@ form:hover .search-input {
 }
 
 .btn {
-  padding-top: 11px;
-  padding-right: 10px;
-  padding-bottom: 9px;
-  padding-left: 10px;
+  padding: 11px 10px 9px 10px;
   font-size: 14px;
   line-height: 18px;
   text-decoration: none;
@@ -639,13 +601,13 @@ form:hover .search-input {
 .promo-arrow-prev,
 .promo-arrow-next {
   position: absolute;
-  display: block;
   top: 114px;
+  display: block;
   width: 22px;
   height: 40px;
   background: url("../img/promo-arrow.png") no-repeat 0 0;
-
 }
+
 .promo-arrow-prev {
   left: 25px;
 }
@@ -654,17 +616,12 @@ form:hover .search-input {
   right: 25px;
   transform: rotate(180deg);
 }
-
 /*   Популярные товары   */
-
 .popular-title {
-  background-color: rgb(247, 243, 236);
   margin-bottom: 21px;
-  padding-left: 28px;
-  padding-top: 25px;
-  padding-right: 24px;
-  padding-bottom: 25px;
+  padding: 25px 24px 25px 28px;
   vertical-align: middle;
+  background-color: rgb(247, 243, 236);
 }
 
 .popular-title::after {
@@ -674,13 +631,11 @@ form:hover .search-input {
 }
 
 .popular-title h2 {
-  margin: 0;
-  padding: 0;
   float: left;
+  margin: 5px 0 0 0;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
-  margin-top: 5px;
   font-weight: lighter;
   color: rgb(50, 66, 92);
 }
@@ -732,8 +687,7 @@ form:hover .search-input {
   position: absolute;
   bottom: 97px;
   left: 0;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 0 20px 0 20px;
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
@@ -754,7 +708,6 @@ form:hover .search-input {
  .product-price-strike {
   position: absolute;
   padding: 10px 35px;
-  font-size: 14px;
   font-size: 17px;
   line-height: 18px;
   text-transform: uppercase;
@@ -774,19 +727,17 @@ form:hover .search-input {
   background-color: rgb(238, 54, 67);
   border-radius: 3px;
 }
-
 /*Всплывающее окно выбора*/
-
 .product-choice {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 10;
   width: 218px;
   height: 88px;
   padding-top: 43px;
   font-family: "Cuprum", sans-serif;
   background-color: rgb(255, 255, 255);
-  z-index: 10;
 }
 
 .product-choice .btn-tocart,
@@ -795,18 +746,18 @@ form:hover .search-input {
   display: block;
   width: 129px;
   margin: 0 auto;
+  margin-bottom: 7px;
+  padding: 7px 0;
   font-size: 14px;
   line-height: 18px;
-  background-color: rgb(99, 166, 62);
-  color: rgb(255, 255, 255);
-  padding: 7px 0;
-  margin-bottom: 7px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(99, 166, 62);
   border: 3px solid rgb(99, 166, 62);
   border-bottom-color: rgb(54, 115, 21);
+  border-radius: 3px;
 }
 
 .product-choice .btn-tocart::before {
@@ -823,7 +774,7 @@ form:hover .search-input {
 .product-choice .btn-bookmarks {
   color: rgb(50, 66, 92);
   background-color: rgb(255, 255, 255);
-  border-bottom-color: rgb(99, 166, 62);;
+  border-bottom-color: rgb(99, 166, 62);
 }
 
 .product-choice .btn-tocart:hover {
@@ -850,8 +801,8 @@ form:hover .search-input {
 }
 
 .product-choice .btn-bookmarks:active {
-  border-color: rgb(193, 198, 206);
   color: rgb(193, 198, 206);
+  border-color: rgb(193, 198, 206);
 }
 
  .product-choice {
@@ -861,9 +812,7 @@ form:hover .search-input {
 .product-item:hover .product-choice{
   display: block;
 }
-
 /*Популярные товары*/
-
 .popular-brand h2 {
   margin-left: -4px;
   margin-top: 6px;
@@ -887,11 +836,6 @@ form:hover .search-input {
 .brand-item img {
   width: 218px;
   height: 143px;
-  /*position: absolute;*/
-  /*margin-left: -100px;*/
-  /*margin-top: -60px;*/
-  /*top: 50%;*/
-  /*left: 50%;*/
 }
 
 .product-list .product-item:nth-child(4n),
@@ -911,8 +855,6 @@ form:hover .search-input {
 .brand-item:active img {
   opacity: 0.5;
 }
-
-
 /*   Сервис   */
 .services {
   margin-bottom: 82px;
@@ -927,9 +869,8 @@ form:hover .search-input {
 }
 
 .services h2 {
-  margin: 0;
+  margin: 0 0 29px 0;
   padding: 0;
-  margin-bottom: 29px;
   font-size: 30px;
   line-height: 24px;
   text-transform: uppercase;
@@ -937,8 +878,7 @@ form:hover .search-input {
 }
 
 .services p {
-  margin: 0;
-  margin-bottom: 19px;
+  margin: 0 0 19px 0;
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -960,10 +900,7 @@ form:hover .search-input {
   display: block;
   width: 198px;
   height: 26px;
-  padding-left: 22px;
-  padding-top: 14px;
-  padding-right: 20px;
-  padding-bottom: 20px;
+  padding: 14px 20px 20px 22px;
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
@@ -993,10 +930,6 @@ form:hover .search-input {
   background: url("../img/vert-shadow.png") no-repeat 0 0;
 }
 
-.service-tabslides {
-  /*position: relative;*/
-}
-
 .service-tabslide {
   float: right;
   width: 620px;
@@ -1010,10 +943,8 @@ form:hover .search-input {
 }
 
 .service-text h3 {
-  margin: 0;
-  padding: 0;
-  margin-top: 3px;
-  margin-bottom: 33px;
+  margin: 3px 0 0 0;
+  padding: 0 0 33px 0;
   font-size: 36px;
   line-height: 24px;
   font-weight: normal;
@@ -1022,21 +953,18 @@ form:hover .search-input {
 }
 
 .service-text p {
-  margin: 0;
-  padding: 0;
-  /*margin-bottom: 10px;*/
   width: auto;
+  margin: 0 0 26px 0;
+  padding: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 24px;
-  margin-bottom: 26px;
 }
 
 .service-text .service-btn {
   float: left;
   width: 175px;
 }
-
 
 .service-tabslide:nth-child(1) {
   background: url("../img/service-1.png") no-repeat right bottom;
@@ -1075,9 +1003,7 @@ form:hover .search-input {
 #tab-3:checked ~ .service-tabslides .service-tabslide:nth-child(3) {
   display: block;
 }
-
- /*  Компания - Контакты  */
-
+ /*  О Компании - Контакты  */
 .about-contacts {
   margin-bottom: 86px;
 }
@@ -1089,8 +1015,7 @@ form:hover .search-input {
 }
 
 .about-contacts h2 {
-  margin: 0;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
   font-size: 30px;
   line-height: 24px;
   text-transform: uppercase;
@@ -1098,8 +1023,7 @@ form:hover .search-input {
 }
 
 .about-contacts p {
-  margin: 0;
-  margin-bottom: 24px;
+  margin: 0 0 24px 0;
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -1108,24 +1032,22 @@ form:hover .search-input {
 .about {
   position: relative;
   float: left;
-  min-height: 369px;
   width: 540px;
+  min-height: 369px;
 }
 
 .about .delivery-brand {
-  margin: 0;
-  padding: 0;
-  margin-top: -4px;
+  margin: -4px 0 0 0;
+  padding: 0 0 0 36px;
   list-style: none;
-  padding-left: 36px;
 }
 
 .about li {
-  margin: 0;
   position: relative;
+  margin: 0;
+  padding-bottom: 20px;
   font-size: 18px;
   line-height: 20px;
-  padding-bottom: 20px;
   list-style: none;
 }
 
@@ -1153,26 +1075,25 @@ form:hover .search-input {
 .contacts {
   position: relative;
   float: right;
-  min-height: 369px;
   width: 300px;
+  min-height: 369px;
 }
 
 .contacts-map {
-  cursor: pointer;
   margin-top: 6px;
   width: 302px;
   height: 159px;
+  cursor: pointer;
 }
 
 .contacts-btn {
   position: absolute;
-  box-sizing: border-box;
   bottom: 0;
   left: 0;
   width: 100%;
   padding-left: 15px;
+  box-sizing: border-box;
 }
-
 /*  Футер  */
 footer {
   width: auto;
@@ -1196,8 +1117,7 @@ footer {
   float: left;
   width: 220px;
   height: 23px;
-  padding-top: 18px;
-  padding-bottom: 22px;
+  padding: 18px 0 22px 0;
   font-size: 30px;
   line-height: 30px;
   text-align: center;
@@ -1213,16 +1133,15 @@ footer {
 }
 
 .footer-address p {
-  margin: 0;
-  margin-left: 4px;
+  margin: 0 0 0 4px;
 }
 
 .footer-menu-top,
 .footer-menu-bottom {
   float: right;
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
  .footer-menu-top {
@@ -1262,8 +1181,7 @@ footer {
 }
 
 .footer-middle {
-  padding-top: 28px;
-  padding-bottom: 49px;
+  padding: 28px 0 49px 0;
   font-size: 18px;
   line-height: 24px;
 }
@@ -1287,12 +1205,9 @@ footer {
   clear: both;
 }
 
-
 .footer-copyright {
   float: left;
-  margin: 0;
-  margin-left: 1px;
-  margin-right: 70px;
+  margin: 0 70px 0 1px;
   width: 320px;
 }
 
@@ -1309,18 +1224,15 @@ footer {
   width: 40px;
   height: 40px;
   margin-right: 5px;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 16px;
-  color: rgb(255, 255, 255);
   font-size: 0;
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
 }
 
 .social-btn:hover,
 .social-btn:active {
   background-color: rgb(238, 54, 67);
 }
-
 
 .social-vk {
   background: rgb(33, 42, 58) url("../img/icon-vk.png") no-repeat 47% 53%;
@@ -1334,19 +1246,16 @@ footer {
   background: rgb(33, 42, 58) url("../img/icon-ig.png") no-repeat 50% 47%;
 }
 
-
 .footer-feedback {
   float: right;
-  margin: 0;
   width: 160px;
-  margin-left: 60px;
+  margin: 0 0 0 60px;
 }
 
 .footer-design {
   float: right;
-  margin: 0;
   width: 112px;
-  margin-left: 28px;
+  margin: 0 0 0 28px;
 }
 
 .footer-feedback a,
@@ -1365,32 +1274,22 @@ footer {
   text-decoration: none;
   color: rgb(238, 64, 57);
 }
-
-
-
-
-
 /*  Хлебные крошки*/
-
-
 .breadcrumbs {
-  margin-top: 21px;
-  margin-bottom: 20px;
-
+  margin: 21px 0 20px 0;
 }
 
 .breadcrumbs a {
   position: relative;
   display: inline-block;
-  /*font-weight: bold;*/
-  text-transform: uppercase;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 18px;
   margin-right: 37px;
+  text-transform: uppercase;
+  text-decoration: none;
   vertical-align: top;
+  color: rgb(0, 0, 0);
 }
 
 .breadcrumbs a:nth-child(1) {
@@ -1399,7 +1298,6 @@ footer {
   height: 15px;
   background: url("../img/icon-home.png") no-repeat 0 0;
 }
-
 
 .breadcrumbs a:after {
   content: "";
@@ -1427,9 +1325,7 @@ footer {
 
 .cat-header {
   margin-bottom: 20px;
-  padding-left: 28px;
-  padding-top: 30px;
-  padding-bottom: 28px;
+  padding: 30px 0 28px 28px;
   background-color: rgb(242, 246, 248);
 }
 
@@ -1458,11 +1354,11 @@ footer {
 .cat-title h3 {
   margin: 0;
   float: left;
+  font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: normal;
   text-transform: uppercase;
-  font-family: "PT Sans", sans-serif;
 }
 
 /*  Фильтр  */
@@ -1474,40 +1370,39 @@ footer {
 }
 
 .cat-filter fieldset {
-  margin: 0;
-  padding: 0;
+  margin: 0 0 23px 0;
+  padding: 0 0 25px 0;
   border: none;
-  margin-bottom: 23px;
-  padding-bottom: 25px;
   border-bottom: 1px solid rgb(229, 229, 229);
 }
 
 .cat-filter legend {
-  font-weight: bold;
-  font-size: 17px;
   margin-bottom: 18px;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .range-controls{
-    position: relative;
-    height: 80px;
-    margin-bottom: 9px;
-    padding: 0 20px;
-    background: rgb(247, 243, 236);
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    overflow: hidden;
+  position: relative;
+  height: 80px;
+  margin-bottom: 9px;
+  padding: 0 20px;
+  background: rgb(247, 243, 236);
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  overflow: hidden;
 }
 .scale{
-    margin-top: 39px;
-    height: 2px;
-    background: rgb(215, 220, 222);
+  margin-top: 39px;
+  height: 2px;
+  background: rgb(215, 220, 222);
 }
 .bar{
-    height: 2px;
-    background: rgb(0, 202, 116);
-    margin-right: 25px;
+  height: 2px;
+  margin-right: 25px;
+  background: rgb(0, 202, 116);
 }
+
 .toggle {
     position: absolute;
     top: 30px;

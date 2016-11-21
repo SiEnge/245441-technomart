@@ -1164,7 +1164,8 @@ form:hover .search-input {
   width: 300px;
 }
 
-.contacts img {
+.contacts-map {
+  cursor: pointer;
   margin-top: 6px;
   width: 302px;
   height: 159px;
@@ -1846,118 +1847,52 @@ a.sort-function.active {
   font-family: "PT Sans", sans-serif;
 }
 
- /*Модальное окно "Товар добавлен в корзину"*/
-.modal-product-add {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 620px;
-  /*min-height: 275px;*/
-  margin-left: -310px;
-  padding-top: 48px;
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
-  border-top: 7px solid rgb(238, 54, 67);
-  /*font-size: 0;*/
-  z-index: 200px;
+@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
-.modal-product-add .modal-check {
-  /*position: relative;*/
-  display: block;
-  width: 480px;
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 50px;
+
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
 }
 
-.modal-product-add .check {
-  position: relative;
-  display: inline-block;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background-color: rgb(99, 166, 92);
-  vertical-align: middle;
-}
-
-.modal-product-add .check::before {
-  content: "";
-  position: absolute;
-  top: 33px;
-  left: 13px;
-
-  width: 22px;
-  height: 8px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 1px;
-  transform: rotate(45deg);
-}
-
-.modal-product-add .check::after {
-  content: "";
-  position: absolute;
-  top: 18px;
-  left: 36px;
-
-  width: 8px;
-  height: 26px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 1px;
-  transform: rotate(45deg);
-}
-
-.modal-product-add .check-text {
-  display: inline-block;
-  vertical-align: middle;
-  font-family: "Cuprum", sans-serif;
-  font-size: 30px;
-  margin-left: 35px;
-}
-
-.modal-product-add .form-btn {
-  background-color: rgb(241, 241, 241);
-  width: 100%;
-  margin-top: 37px;
-  padding: 37px 0;
-  font-size: 0;
-}
-
-.form-btn .btn-checkout {
-  display: inline-block;
-  width: 220px;
-  margin-right: 20px;
-  margin-left: 80px;
-  font-size: 14px;
-}
-
-.form-btn .btn-continue {
-  display: inline-block;
-  width: 220px;
-  font-size: 14px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-}
-
-.modal-product-add {
-  display: none;
-}
 
 /*  модальное окно - "Напишите нам*/
 .modal-write-us {
-  position: absolute;
+  display: none;
+  position: fixed;
   top: 50%;
   left: 50%;
   width: 620px;
   margin-left: -310px;
+  margin-top: -230px;
   padding-top: 25px;
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
   border-top: 7px solid rgb(238, 54, 67);
   font-size: 0;
-  z-index: 100px;
+  z-index: 100;
 }
 
 .form-text {
@@ -2015,10 +1950,6 @@ a.sort-function.active {
   color: rgb(255, 255, 255);
 }
 
-.modal-write-us {
-  display: none;
-}
-
 .modal-content-close {
   position: absolute;
   top: 0;
@@ -2053,6 +1984,7 @@ a.sort-function.active {
 }
 
 .modal-map {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -2065,11 +1997,8 @@ a.sort-function.active {
   box-shadow: 0 0 16px 0 rgba(35, 31, 32, 0.5);
 }
 
- .modal-map {
-   display: none;
- }
-
 .modal-overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -2079,6 +2008,107 @@ a.sort-function.active {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.modal-overlay {
+/*Модальное окно "Товар добавлен в корзину"*/
+.modal-product-add {
   display: none;
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ width: 620px;
+ /*min-height: 275px;*/
+ margin-left: -310px;
+ margin-top: -150px;
+ padding-top: 48px;
+ color: rgb(0, 0, 0);
+ background-color: rgb(255, 255, 255);
+ box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+ border-top: 7px solid rgb(238, 54, 67);
+ /*font-size: 0;*/
+ z-index: 100;
+}
+
+.modal-product-add .modal-check {
+ /*position: relative;*/
+ display: block;
+ width: 480px;
+ margin: 0 auto;
+ text-align: center;
+ margin-bottom: 50px;
+}
+
+.modal-product-add .check {
+ position: relative;
+ display: inline-block;
+ width: 64px;
+ height: 64px;
+ border-radius: 50%;
+ background-color: rgb(99, 166, 92);
+ vertical-align: middle;
+}
+
+.modal-product-add .check::before {
+ content: "";
+ position: absolute;
+ top: 33px;
+ left: 13px;
+
+ width: 22px;
+ height: 8px;
+ background-color: rgb(255, 255, 255);
+ border-radius: 1px;
+ transform: rotate(45deg);
+}
+
+.modal-product-add .check::after {
+ content: "";
+ position: absolute;
+ top: 18px;
+ left: 36px;
+
+ width: 8px;
+ height: 26px;
+ background-color: rgb(255, 255, 255);
+ border-radius: 1px;
+ transform: rotate(45deg);
+}
+
+.modal-product-add .check-text {
+ display: inline-block;
+ vertical-align: middle;
+ font-family: "Cuprum", sans-serif;
+ font-size: 30px;
+ margin-left: 35px;
+}
+
+.modal-product-add .form-btn {
+ background-color: rgb(241, 241, 241);
+ width: 100%;
+ margin-top: 37px;
+ padding: 37px 0;
+ font-size: 0;
+}
+
+.form-btn .btn-checkout {
+ display: inline-block;
+ width: 220px;
+ margin-right: 20px;
+ margin-left: 80px;
+ font-size: 14px;
+}
+
+.form-btn .btn-continue {
+ display: inline-block;
+ width: 220px;
+ font-size: 14px;
+ background-color: rgb(255, 255, 255);
+ color: rgb(0, 0, 0);
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }

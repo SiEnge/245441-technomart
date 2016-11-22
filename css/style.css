@@ -923,6 +923,7 @@ form:hover .search-input {
 }
 
 .services p {
+  width: 400px;
   margin: 0 0 19px 0;
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
@@ -1007,6 +1008,18 @@ form:hover .search-input {
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 24px;
+}
+
+.service-tabslide:nth-child(1) p {
+  width: 280px;
+}
+
+.service-tabslide:nth-child(2) p {
+  width: 380px;
+}
+
+.service-tabslide:nth-child(3) p {
+  width: 285px;
 }
 
 .service-text .service-btn {
@@ -1145,6 +1158,10 @@ form:hover .search-input {
   min-height: 369px;
 }
 
+.contacts p {
+  width: 180px;
+}
+
 .contacts-map {
   margin-top: 7px;
   width: 300px;
@@ -1273,8 +1290,8 @@ footer {
 
 .footer-copyright {
   float: left;
-  margin: 0 70px 0 1px;
-  width: 320px;
+  margin: 0 160px 0 1px;
+  width: 230px;
 }
 
 .footer-social {
@@ -1755,6 +1772,7 @@ a.sort-function.active {
 
 .cat-nav {
   margin: 0 0 60px 0;
+  padding: 0;
   font-size: 0;
 }
 
@@ -1796,7 +1814,7 @@ a.sort-function.active {
 }
 
 .cat-text {
-  padding: 67px 30px;
+  padding: 67px 30px 68px 30px;
   background-color: rgb(242, 246, 248);
 }
 
@@ -1810,6 +1828,7 @@ a.sort-function.active {
 
 .cat-text p {
   margin: 0;
+  padding: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -1958,6 +1977,11 @@ a.sort-function.active {
   margin-left: -470px;
   background: rgb(68, 68, 68) url("../img/map-popup.jpg") no-repeat 0 0;
   box-shadow: 0 0 16px 0 rgba(35, 31, 32, 0.5);
+}
+.modal-map iframe {
+  width: 940px;
+  height: 445px;
+  border: 0;
 }
 
 .modal-overlay {

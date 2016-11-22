@@ -149,7 +149,7 @@ form:hover .search-input {
 .header-cart::before {
   content: "";
   position: absolute;
-  top: 12px;
+  top: 10px;
   left: 17px;
   width: 20px;
   height: 20px;
@@ -157,11 +157,11 @@ form:hover .search-input {
 }
 
 .header-bookmarks::before {
-  background: url("../img/icon-bookmark.png") no-repeat 0 0;
+  background: url("../img/sprite-sheet.png") no-repeat -43px 0;
 }
 
 .header-cart::before {
-  background: url("../img/icon-basket.png") no-repeat 0 0;
+  background: url("../img/sprite-sheet.png") no-repeat -61px 0;
 }
 
 .header-bookmarks:hover,
@@ -241,7 +241,7 @@ form:hover .search-input {
   left: 13px;
   width: 20px;
   height: 20px;
-  background: url("../img/icon-phone.png") no-repeat 0 0;
+  background: url("../img/sprite-sheet.png") no-repeat -142px -1px;
 }
 
 .address {
@@ -293,11 +293,11 @@ form:hover .search-input {
 .btn-login::before {
   content: "";
   position: absolute;
-  top: 14px;
+  top: 12px;
   left: 14px;
   width: 20px;
   height: 20px;
-  background: url("../img/icon-login.png") no-repeat 0 0;
+  background: url("../img/sprite-sheet.png") no-repeat -100px 0;
   opacity: 0.3;
 }
 
@@ -310,11 +310,11 @@ form:hover .search-input {
 .btn-out::before {
   content: "";
   position: absolute;
-  top: 14px;
+  top: 12px;
   right: 11px;
   width: 20px;
   height: 20px;
-  background: url("../img/icon-logout.png") no-repeat 0 0;
+  background: url("../img/sprite-sheet.png") no-repeat -120px 0;
   opacity: 0.3;
 }
 
@@ -328,11 +328,11 @@ form:hover .search-input {
 .btn-user::before {
   content: "";
   position: absolute;
-  top: 13px;
+  top: 11px;
   left: 12px;
   width: 20px;
   height: 20px;
-  background: url("../img/icon-user.png") no-repeat 0 0;
+  background: url("../img/sprite-sheet.png") no-repeat -80px 0;
   opacity: 0.3;
 }
 
@@ -453,29 +453,84 @@ form:hover .search-input {
 }
 
 .promo-material {
-  background: rgb(246, 178, 45) url("../img/promo-1.png") no-repeat 212px 30px;
+  background-color: rgb(246, 178, 45);
   border: 1px solid rgb(246, 178, 45);
 }
 
 .promo-tool {
-  background: rgb(74, 175, 222) url("../img/promo-2.png") no-repeat 196px 32px;
+  background-color: rgb(74, 175, 222);
   border: 1px solid rgb(74, 175, 222);
 }
 
 .promo-equipment {
-  background: rgb(204, 121, 209) url("../img/promo-3.png") no-repeat 190px 30px;
+  background-color: rgb(204, 121, 209);
   border: 1px solid rgb(204, 121, 209);
 }
 
 .promo-discount {
-  background: rgb(133, 209, 121) url("../img/promo-4.png") no-repeat 195px 25px;
+  background-color: rgb(133, 209, 121);
   border: 1px solid rgb(133, 209, 121);
 }
 
 .promo-delivery {
-  background: rgb(246, 178, 45) url("../img/promo-5.png") no-repeat 190px 31px;
+  background-color: rgb(246, 178, 45);
   border: 1px solid rgb(246, 178, 45);
 }
+
+.promo-material::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 212px;
+  width: 44px;
+  height: 66px;
+  background: url("../img/sprite-sheet.png") no-repeat -141px -164px;
+}
+
+.promo-tool::after {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: 196px;
+  width: 75px;
+  height: 61px;
+  background: url("../img/sprite-sheet.png") no-repeat -61px -166px;
+}
+
+.promo-equipment::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 190px;
+  width: 78px;
+  height: 62px;
+  background: url("../img/sprite-sheet.png") no-repeat -2px -89px;
+}
+
+.promo-discount::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 195px;
+  width: 59px;
+  height: 72px;
+  background: url("../img/sprite-sheet.png") no-repeat 0 -161px;
+}
+
+.promo-delivery::after {
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: 190px;
+  width: 78px;
+  height: 63px;
+  background: url("../img/sprite-sheet.png") no-repeat -86px -80px;
+}
+
+
+
+
+
 /* Промо Слайдер  */
 .promo-slider {
   position: relative;
@@ -605,7 +660,7 @@ form:hover .search-input {
   display: block;
   width: 22px;
   height: 40px;
-  background: url("../img/promo-arrow.png") no-repeat 0 0;
+  background: url("../img/sprite-sheet.png") no-repeat -142px -24px;
 }
 
 .promo-arrow-prev {
@@ -666,16 +721,6 @@ form:hover .search-input {
 
 .product-item {
   height: 316px;
-}
-
-.product-item .new {
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  z-index: 10;
-  width: 60px;
-  height: 60px;
-  background: url("../img/new.png") no-repeat 0 0;
 }
 
 .product-item img {
@@ -763,11 +808,11 @@ form:hover .search-input {
 .product-choice .btn-tocart::before {
   content: "";
   position: absolute;
-  top: 7px;
-  left: 9px;
+  top: 5px;
+  left: 8px;
   width: 20px;
   height: 20px;
-  background: url("../img/icon-basket.png") no-repeat 0 0;
+  background: url("../img/sprite-sheet.png") no-repeat -60px 0;
   opacity: 0.3;
 }
 
@@ -927,7 +972,7 @@ form:hover .search-input {
   right: 0;
   width: 10px;
   height: 279px;
-  background: url("../img/vert-shadow.png") no-repeat 0 0;
+  background: url("../img/sprite-sheet.png") no-repeat -190px 0;
 }
 
 .service-tabslides {
@@ -1020,6 +1065,7 @@ form:hover .search-input {
 #tab-2:checked ~ .service-tabslides .service-tabslide:nth-child(2) {
   display: block;
 }
+
 #tab-3:checked ~ .service-tabslides .service-tabslide:nth-child(3) {
   display: block;
 }
@@ -1100,9 +1146,9 @@ form:hover .search-input {
 }
 
 .contacts-map {
-  margin-top: 6px;
-  width: 302px;
-  height: 159px;
+  margin-top: 7px;
+  width: 300px;
+  height: 158px;
   cursor: pointer;
 }
 
@@ -1232,6 +1278,7 @@ footer {
 }
 
 .footer-social {
+  position: relative;
   float: left;
   width: 150px;
   margin-top: -1px;
@@ -1246,24 +1293,49 @@ footer {
   margin-right: 5px;
   font-size: 0;
   color: rgb(255, 255, 255);
+  background-color: rgb(33, 42, 58);
   border-radius: 50%;
+}
+
+.social-vk::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 9px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/sprite-sheet.png");
+  background-repeat: no-repeat;
+  background-position: -60px -20px;
+}
+
+.social-fb::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 60px;
+  width: 10px;
+  height: 20px;
+  background-image: url("../img/sprite-sheet.png");
+  background-repeat: no-repeat;
+  background-position: -46px -22px;
+}
+
+.social-ig::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 101px;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/sprite-sheet.png");
+  background-repeat: no-repeat;
+  background-position: -81px -21px;
 }
 
 .social-btn:hover,
 .social-btn:active {
   background-color: rgb(238, 54, 67);
-}
-
-.social-vk {
-  background: rgb(33, 42, 58) url("../img/icon-vk.png") no-repeat 47% 53%;
-}
-
-.social-fb {
-  background: rgb(33, 42, 58) url("../img/icon-fb.png") no-repeat 50% 47%;
-}
-
-.social-ig {
-  background: rgb(33, 42, 58) url("../img/icon-ig.png") no-repeat 50% 47%;
 }
 
 .footer-feedback {
@@ -1316,7 +1388,7 @@ footer {
   font-size: 0;
   width: 15px;
   height: 15px;
-  background: url("../img/icon-home.png") no-repeat 0 0;
+  background: url("../img/sprite-sheet.png") no-repeat -3px -24px;
 }
 
 .breadcrumbs a:after {
@@ -1326,7 +1398,7 @@ footer {
   top: 1px;
   width: 8px;
   height: 12px;
-  background: url("../img/icon-right.png") no-repeat 0 0;
+  background: url("../img/sprite-sheet.png") no-repeat -27px -24px;
 }
 
 .breadcrumbs a:nth-child(1)::after {
@@ -1505,8 +1577,8 @@ fieldset:nth-child(3) {
   position: absolute;
   top: -2px;
   left: -35px;
-  width: 30px;
-  height: 30px;
+  width: 27px;
+  height: 25px;
 }
 
 .filter-brand label:hover::before,
@@ -1527,7 +1599,7 @@ fieldset:nth-child(3) {
 .filter-brand label::before {
   top: -2px;
   left: -35px;
-  background: url("../img/icon-check-off.png") no-repeat 0 0;
+  background: url("../img/sprite-sheet.png") no-repeat -33px -42px;
   opacity: 0.7;
 }
 
@@ -1535,7 +1607,7 @@ fieldset:nth-child(3) {
 .filter-supply label::before {
   top: -2px;
   left: -36px;
-  background: url("../img/icon-circle.png") no-repeat 0 0;
+  background: url("../img/sprite-sheet.png") no-repeat -88px -42px;
   opacity: 0.7;
 }
 
@@ -1544,12 +1616,12 @@ fieldset:nth-child(3) {
 #brand-makita:checked ~ .filter-brand-label label[for="brand-makita"]::before,
 #brand-dewalt:checked ~ .filter-brand-label label[for="brand-dewalt"]::before,
 #brand-hitachi:checked ~ .filter-brand-label label[for="brand-hitachi"]::before {
-   background: url("../img/icon-check-on.png") no-repeat 0 0;
+   background: url("../img/sprite-sheet.png") no-repeat -2px -42px;
 }
 
 #supply-battery:checked ~ .filter-supply-label label[for="supply-battery"]::before ,
 #supply-mains:checked ~ .filter-supply-label label[for="supply-mains"]::before {
-   background: url("../img/icon-circle-dot.png") no-repeat 0 0;
+   background: url("../img/sprite-sheet.png") no-repeat -60px -41px;
 }
 
 .form-btn-show {
@@ -1595,7 +1667,7 @@ fieldset:nth-child(3) {
   height: 11px;
   margin-left: 16px;
   font-size: 0;
-  background: url("../img/sort.png") no-repeat 0 0;
+  background: url("../img/sprite-sheet.png") no-repeat -104px -25px;
   opacity: 0.3;
 }
 
@@ -1612,7 +1684,7 @@ fieldset:nth-child(3) {
 .sort-down:active,
 a.sort-up.active,
 a.sort-down.active {
-  background-image: url("../img/sort-active.png");
+  background: url("../img/sprite-sheet.png") no-repeat -123px -25px;
   opacity: 1;
 }
 
@@ -1674,11 +1746,11 @@ a.sort-function.active {
   top: -1px;
   right: -1px;
   z-index: 100;
-  width: 60px;
-  height: 60px;
+  width: 59px;
+  height: 59px;
   font-size: 0;
   overflow: hidden;
-  background: url("../img/new.png") no-repeat 0 0;
+  background: url("../img/sprite-sheet.png") no-repeat -120px -240px;
 }
 
 .cat-nav {

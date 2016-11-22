@@ -5,14 +5,6 @@
     var cart_close = cart_add.querySelector(".modal-content-close");
     var cart_conti = cart_add.querySelector(".btn-continue");
 
-
-    // for (var i = 0; i < tocart.lenght; i++) {
-    //     tocart[i].addEventListener("click", function(event) {
-    //     event.preventDefault();
-    //     cart_add.classList.add("modal-show");
-    //   })
-    // };
-
     Array.prototype.forEach.call(tocart, function(button) {
       button.addEventListener("click", function(event) {
         event.preventDefault();
